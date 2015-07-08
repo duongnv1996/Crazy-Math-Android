@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_color">#ff0b3260</color>
+    <color name="txtview_color">#ff576710</color>
+    <color name="txt_tap_color">#FFFF8E37</color>
+    <color name="background_colorGV">#FF3D72FF</color>
+    <color name="buttonTF_txt_color">#ffff4118</color>
+    <color name="buttonTF_background_color">#fff4ffec</color>
+<color name="bieuthuc_color">#FFF4FFEC</color>
+
+</resources>

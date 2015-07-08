@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/gameView"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="@color/background_colorGV">
+
+    <Button
+        android:id="@+id/buttonFalse"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:theme="@style/AppTheme"
+        android:typeface="sans"
+        android:textSize="60sp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginRight="19dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/buttonTrue"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:theme="@style/AppTheme"
+        android:typeface="sans"
+        android:textSize="60sp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_alignTop="@+id/buttonFalse"
+        android:layout_toLeftOf="@+id/buttonFalse"
+        android:layout_toStartOf="@+id/buttonFalse" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/check"
+        android:id="@+id/imageViewTrue"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/buttonFalse"
+        android:layout_toStartOf="@+id/buttonFalse"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="55dp" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/notrue"
+        android:id="@+id/imageViewFalse"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/buttonFalse"
+        android:layout_alignEnd="@+id/buttonFalse"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="55dp" />
+    <TextView
+        android:id="@+id/BieuThuc"
+
+        android:textColor="@color/bieuthuc_color"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/KetQua"
+        android:textColor="@color/bieuthuc_color"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BieuThuc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
