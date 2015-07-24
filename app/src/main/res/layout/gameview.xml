@@ -4,7 +4,6 @@
     android:id="@+id/gameView"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
     android:background="@color/background_colorGV">
 
     <Button
@@ -14,13 +13,11 @@
         android:theme="@style/AppTheme"
         android:typeface="sans"
         android:textSize="60sp"
-        android:background="@android:drawable/editbox_background"
-        android:layout_marginRight="19dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="25dp"
-        android:layout_alignParentBottom="true"
+        android:background="@drawable/btntf"
+        android:layout_alignTop="@+id/buttonTrue"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp" />
 
     <Button
         android:id="@+id/buttonTrue"
@@ -29,55 +26,118 @@
         android:theme="@style/AppTheme"
         android:typeface="sans"
         android:textSize="60sp"
-        android:background="@android:drawable/editbox_background"
-        android:layout_alignTop="@+id/buttonFalse"
-        android:layout_toLeftOf="@+id/buttonFalse"
-        android:layout_toStartOf="@+id/buttonFalse" />
+        android:background="@drawable/btntf"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="20dp" />
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/check"
         android:id="@+id/imageViewTrue"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/buttonFalse"
-        android:layout_toStartOf="@+id/buttonFalse"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="55dp" />
+        android:layout_alignBottom="@+id/buttonTrue"
+        android:layout_alignRight="@+id/buttonTrue"
+        android:layout_alignEnd="@+id/buttonTrue"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_marginRight="15dp" />
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/notrue"
+        android:src="@drawable/delete"
         android:id="@+id/imageViewFalse"
-        android:layout_alignParentBottom="true"
+        android:layout_alignBottom="@+id/buttonFalse"
         android:layout_alignRight="@+id/buttonFalse"
         android:layout_alignEnd="@+id/buttonFalse"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="55dp" />
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="15dp" />
     <TextView
         android:id="@+id/BieuThuc"
 
         android:textColor="@color/bieuthuc_color"
-        android:textSize="70sp"
+        android:textSize="75sp"
         android:textStyle="bold"
         android:typeface="sans"
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/KetQua"
+         />
     <TextView
         android:id="@+id/KetQua"
         android:textColor="@color/bieuthuc_color"
-        android:textSize="70sp"
+        android:textSize="75sp"
         android:textStyle="bold"
         android:typeface="sans"
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/BieuThuc"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DiemSo"
+        android:textColor="@color/bieuthuc_color"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+
+        android:textSize="30dp"
+        android:id="@+id/tvTime"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/buttonFalse"
+        android:layout_alignStart="@+id/buttonFalse" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:id="@+id/progressBar"
+        android:progressDrawable="@drawable/progress_bar"
+        android:indeterminate="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/buttonTrue"
+        android:layout_alignEnd="@+id/buttonTrue" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:id="@+id/progressBar2"
+        android:progressDrawable="@drawable/progress_bar_1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/progressBar"
+        android:layout_toRightOf="@+id/progressBar"
+        android:layout_toEndOf="@+id/progressBar" />
+
+    <!--<Button-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:id="@+id/sound"-->
+        <!--android:background="@drawable/soundon"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true" />-->
 
 </RelativeLayout>

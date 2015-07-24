@@ -17,7 +17,7 @@ public class KetQua {
     private int ketQua=0;
     // Lay string tu bieu thuc gan vao str de xu ly
     private String str;
-
+boolean isCheckxx=false;
     public void set(String str) {
         this.str =str;
 
@@ -41,7 +41,7 @@ public class KetQua {
                 break;
             }
             case 'x':{
-              this.ketQua+=(Integer.parseInt(String.valueOf(so2))* Integer.parseInt(String.valueOf(so1)));
+              this.ketQua+=(Integer.parseInt(String.valueOf(so1))* Integer.parseInt(String.valueOf(so2)));
 
                 break;
             }
@@ -53,7 +53,6 @@ public class KetQua {
         if ((str.charAt(6) == 'x')) {
             //TH : .... x
             xulyToanTu(str.charAt(6), str.charAt(4), str.charAt(8));
-            str=str.replace(str.charAt(4),'0');
             //Truong hop ngoai le - x
             if(str.charAt(2)=='-'){
                 ketQua= Integer.parseInt(String.valueOf(str.charAt(0))) - ketQua;
@@ -61,10 +60,12 @@ public class KetQua {
             else if (str.charAt(2)=='x'){
                 // TH x x
                 ketQua*=Integer.parseInt(String.valueOf(str.charAt(0)));
+                isCheckxx=true;
             }
-            else {
+            else if(str.charAt(2)=='+'){
                 //Truong hop + x
-                xulyToanTu(str.charAt(2), str.charAt(0), str.charAt(4));
+                //xulyToanTu(str.charAt(2), str.charAt(0), str.charAt(4));
+                ketQua+=Integer.parseInt(String.valueOf(str.charAt(0)));
 
             }
         }
@@ -85,16 +86,25 @@ public class KetQua {
     }
     Random random= new Random();
     private int randKQ;
-    public int randKetQua(){            //[0;2]
-         randKQ= ketQua - random.nextInt((1-(-1))+1)+(-1);
-        return  randKQ;
+    public void randKetQua(){            //[-1;1)
+         randKQ= ketQua + random.nextInt((2+0+1)+(0));
+           // randKQ=ketQua-1;
     }
-    public boolean kiemTraTrungSo(){
-        if(randKQ==ketQua){
+    public int getRandKQ(){
+        return randKQ;
+    }
+
+    public boolean kiemTraTrungSo(int a,int b){
+        if(a==b){
             return true;
         }
         return  false;
     }
+
+    public boolean isCheckxx() {
+        return isCheckxx;
+    }
+
     public void resetBien(int a){
         this.ketQua=a;
     }

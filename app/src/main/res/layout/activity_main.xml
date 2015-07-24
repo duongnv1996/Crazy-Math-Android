@@ -11,15 +11,17 @@
     android:clickable="true"
     android:id="@+id/firstView">
 
+
     <ImageView
         android:id="@+id/imgView"
-        android:src="@drawable/imgview"
+        android:src="@drawable/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/imgView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp" />
+        android:visibility="visible"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/buttonEnter" />
 
     <!--<Button-->
         <!--android:id="@+id/btPlay"-->
@@ -31,12 +33,41 @@
         <!--android:layout_centerHorizontal="true" />-->
     <Button
         android:id="@+id/buttonEnter"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:background="@drawable/start"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="94dp" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/play"
-        android:layout_below="@+id/imgView"
-        android:layout_centerHorizontal="true" />
-
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tvBest"
+        android:textColor="@color/cyan"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <!--<Button-->
+        <!--android:id="@+id/buttonShare"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/rank"-->
+        <!--android:layout_below="@+id/imgView"-->
+        <!--android:layout_alignRight="@+id/imgView"-->
+        <!--android:layout_alignEnd="@+id/imgView" />-->
+    <!--<Button-->
+        <!--android:id="@+id/buttonRank"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/share"-->
+        <!--android:layout_below="@+id/imgView"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
 
 
 </RelativeLayout>

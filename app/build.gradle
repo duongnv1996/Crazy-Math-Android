@@ -19,7 +19,7 @@ android {
     }
     sourceSets {
         main {
-            res.srcDirs = ['src/main/res', 'src/main/res/mp3', 'src/main/res/sound', 'src/main/res/KetQua']
+            res.srcDirs = ['src/main/res', 'src/main/res/mp3', 'src/main/res/sound', 'src/main/res/KetQua', 'src/main/res/anim']
             java.srcDirs = ['src/main/java', 'src/main/java/KetQua', 'src/main/java/Ketqua']
         }
     }
